@@ -1,0 +1,12 @@
+.manager {
+  background-color: rgb(234, 185, 185);
+}
+
+.engineer {
+  background-color: rgb(134, 207, 134);
+}
+
+.intern {
+  background-color: rgb(186, 156, 208);
+  color: blanchedalmond;
+}

@@ -18,6 +18,7 @@ const templateHTML = function (teamCards) {
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./styles.css">
 
     <title>Team Profile Generator</title>
   </head>
@@ -67,7 +68,7 @@ const createManagerCard = function (manager) {
   return `
     <div class="col-4 mt-4">
           <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header manager">
               <h3>${manager.name}</h3>
               <h4>Manager</h4>
             </div>
@@ -86,7 +87,7 @@ const createEngineerCard = function (engineer) {
   return `
     <div class="col-4 mt-4">
           <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header engineer">
               <h3>${engineer.name}</h3>
               <h4>Engineer</h4>
             </div>
@@ -94,7 +95,7 @@ const createEngineerCard = function (engineer) {
             <div class="card-body">
               <p class="id">ID: ${engineer.id}</p>
               <p class="email">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
-              <p class="github">GitHub: ${engineer.github}</p>
+              <p class="github">GitHub: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></p>
             </div>
           </div>
     </div>`;
@@ -105,7 +106,7 @@ const createInternCard = function (intern) {
   return `
     <div class="col-4 mt-4">
           <div class="card h-100">
-            <div class="card-header">
+            <div class="card-header intern">
               <h3>${intern.name}</h3>
               <h4>Intern</h4>
             </div>
